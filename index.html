@@ -31,6 +31,7 @@
             console.log(e);
 
             ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+            ctx.lineWidth = hue;
 
             ctx.beginPath();
             // start from
@@ -45,6 +46,9 @@
             // lastY = e.offsetY
 
             hue++;
+            if(hue >= 360){
+                hue = 0;
+            }
 
         }
 
